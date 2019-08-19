@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RoverTests" tests="14" skipped="0" failures="0" errors="0" timestamp="2019-08-17T06:45:47" hostname="RENTLAPT0041" time="0.024">
+  <properties/>
+  <testcase name="VectorCanRotateRightFromEast" classname="RoverTests" time="0.011"/>
+  <testcase name="VectorCanRotateRightFromWest" classname="RoverTests" time="0.001"/>
+  <testcase name="VectorInitializesWithGivenPoints" classname="RoverTests" time="0.001"/>
+  <testcase name="VectorCanRotateLeftFromEast" classname="RoverTests" time="0.001"/>
+  <testcase name="VectorCanRotateLeftFromWest" classname="RoverTests" time="0.0"/>
+  <testcase name="VectorCanRotateRightFromSouth" classname="RoverTests" time="0.0"/>
+  <testcase name="NextVectorInNorth" classname="RoverTests" time="0.0"/>
+  <testcase name="NextVectorInSouth" classname="RoverTests" time="0.0"/>
+  <testcase name="vectorCanRotateRightFromNorth" classname="RoverTests" time="0.0"/>
+  <testcase name="VectorMoveAndRotate" classname="RoverTests" time="0.001"/>
+  <testcase name="NextVectorInEast" classname="RoverTests" time="0.001"/>
+  <testcase name="NextVectorInWest" classname="RoverTests" time="0.0"/>
+  <testcase name="VectorCanRotateLeftFromSouth" classname="RoverTests" time="0.0"/>
+  <testcase name="vectorCanRotateLeftFromNorth" classname="RoverTests" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

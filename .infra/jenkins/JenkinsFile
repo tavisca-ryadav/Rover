@@ -1,0 +1,54 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                sh script: '''
+                    chmod 777 ./gradlew
+                    ./gradlew build
+                ''',
+            label: "Building Project"
+            }
+        }
+        stage('Test')
+        {
+            steps {
+                sh script: '''
+                    ./gradlew test
+                ''',
+            label: "Running Unit Test Cases"
+            }
+        }
+        stage('Static Code Analysis')
+        {
+            steps {
+                sh script: '''
+                    echo "I am in Sonarqube scan"
+                ''',
+            label: "Running Sonarqube Scan"
+            }
+        }
+        stage('Build DockerImage')
+        {
+            steps {
+                sh script: '''
+                     docker build -t "rover" build/libs/.
+                      echo "build successfully"
+                      docker tag rover rajatindefatigable/rover
+                      echo "tagged successfully"
+                ''',
+            label: "Building Docker Image"
+            }
+        }
+        stage('Publish DockerImage')
+        {
+            steps {
+                sh script: '''
+                    docker login -u rajatindefatigable -p Bigbang@9833
+                    docker push rajatindefatigable/rover:latest
+                ''',
+            label: "Publishing Docker Image"
+            }
+        }
+    }
+}

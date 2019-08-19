@@ -1,0 +1,4 @@
+FROM java:8  
+COPY MarsRover-1.0.jar var/
+WORKDIR /var
+RUN java -jar MarsRover-1.0.jar
